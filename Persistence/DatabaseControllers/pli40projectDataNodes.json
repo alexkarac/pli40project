@@ -1,0 +1,22 @@
+[
+    {
+        "Name" : "Patra",
+        "CentralNode" : true
+    },
+    {
+        "Name" : "Athens",
+        "CentralNode" : true
+    },
+    {
+        "Name" : "Chania",
+        "CentralNode" : true
+    },
+    {
+        "Name" : "Irakleio",
+        "CentralNode" : true
+    },
+    {
+        "Name" : "Rethymno",
+        "CentralNode" : true
+    }
+]

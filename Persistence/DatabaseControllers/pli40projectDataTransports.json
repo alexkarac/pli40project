@@ -1,0 +1,14 @@
+[
+    {
+        "VehicleType" : "KTEL"
+    },
+    {
+        "VehicleType" : "Train"
+    },
+    {
+        "VehicleType" : "Ship"
+    },
+    {
+        "VehicleType" : "Aeroplane"
+    }
+]

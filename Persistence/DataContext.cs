@@ -9,9 +9,15 @@ namespace Persistence
         public DataContext(DbContextOptions options) : base(options)
         {
         }
-
-        public DbSet<User> Users { get; set; }
+        
+        public DbSet<Node> Nodes { get; set; }
+        public DbSet<Transport> Transports { get; set; }
+        public DbSet<DepartureTime> DepartureTimes { get; set; }
+        
+        public DbSet<DepartureDayTime> DepartureDayTimes { get; set; }
+        public DbSet<Route> Routes { get; set; }
 
         
+
     }
 }

@@ -1,0 +1,34 @@
+[
+	{
+		"StartNode" : {
+			"Name": "Patra",
+			"CentralNode": true
+		},
+		"EndNode": {
+			"Name" : "Athens",
+			"CentralNode": true
+		},
+		"Transport" : {
+			"VehicleType" : "KTEL"
+		},
+		"Duration" : 135,
+		"VanguardTime" : 15,
+		"Cost" : 2500
+	},
+	{
+		"StartNode" : {
+			"Name": "Patra",
+			"CentralNode": true
+		},
+		"EndNode": {
+			"Name" : "Athens",
+			"CentralNode": true
+		},
+		"Transport" : {
+			"VehicleType" : "TRAIN"
+		},
+		"Duration" : 165,
+		"VanguardTime" : 15,
+		"Cost" : 2000
+	}
+]
