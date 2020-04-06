@@ -5,6 +5,17 @@ import moment from 'moment';
 import Colors from '../constants/Colors';
 import ResultItem from '../components/generalComponents/ResultItem';
 import { ROUTE } from '../data/dummy-data';
+import MSSQL from 'react-native-mssql';
+
+const config = {
+    server: '192.168.1.1', //ip address of the mssql database
+    username: '', //username to login to the database
+    password: '', //password to login to the database
+    database: 'pli40db', //the name of the database to connect to
+    // port: 1234, //OPTIONAL, port of the database on the server
+    // timeout: 5, //OPTIONAL, login timeout for the server
+};
+
 
 const ResultScreen = props => {
     const tripDate = props.navigation.getParam('selectedDate');
@@ -16,6 +27,16 @@ const ResultScreen = props => {
     if (isDirect) {
         selectedStops = 0;
     };
+
+    const connectionStatus = () => {
+        var con = MSSQL.connect(config);
+        if (con) {
+            return 'connected successfully';
+        } else {
+            return 'not connected';
+        };
+    };
+
     const availableRoutes = ROUTE.filter(
         route => (
             route.startPoint.match(startPoint) &&
@@ -39,9 +60,10 @@ const ResultScreen = props => {
 
     return (
         <View>
-            <Text>{availableRoutes.length}</Text>
+            {/* <Text>{availableRoutes.length}</Text>
             <Text>{moment(tripTime).format('HH:mm')}</Text>
-            <Text>{moment(tripDate).format("DD-MM-YYYY")}</Text>
+            <Text>{moment(tripDate).format("DD-MM-YYYY")}</Text>*/}
+            <Text>{connectionStatus()}</Text>
             <FlatList
                 keyExtractor={(item, index) => item.id.toString()}
                 data={availableRoutes}
